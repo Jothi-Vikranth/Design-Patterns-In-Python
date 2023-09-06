@@ -7,7 +7,8 @@ from factory_b import FactoryB
 
 class IAbstractFactory(metaclass=ABCMeta):
     "Abstract Factory Interface"
-
+    # desc : Abstract Factory
+    
     @staticmethod
     @abstractmethod
     def create_object(factory):
@@ -32,8 +33,8 @@ class AbstractFactory(IAbstractFactory):
 
 
 # The Client
-PRODUCT = AbstractFactory.create_object('ab')
+PRODUCT = AbstractFactory.create_object('ab')   # desc : Client
 print(f"{PRODUCT.__class__}")
 
-PRODUCT = AbstractFactory.create_object('bc')
+PRODUCT = AbstractFactory.create_object('bc')   # desc : Client
 print(f"{PRODUCT.__class__}")

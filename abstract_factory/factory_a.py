@@ -5,6 +5,7 @@ from abc import ABCMeta, abstractmethod
 
 class IProduct(metaclass=ABCMeta):
     "A Hypothetical Class Interface (Product)"
+    # desc : Abstract Product
 
     @staticmethod
     @abstractmethod
@@ -14,6 +15,7 @@ class IProduct(metaclass=ABCMeta):
 
 class ConcreteProductA(IProduct):
     "A Concrete Class that implements the IProduct interface"
+    # desc : Concrete Product
 
     def __init__(self):
         self.name = "ConcreteProductA"
@@ -24,6 +26,7 @@ class ConcreteProductA(IProduct):
 
 class ConcreteProductB(IProduct):
     "A Concrete Class that implements the IProduct interface"
+    # desc : Concrete Product
 
     def __init__(self):
         self.name = "ConcreteProductB"
@@ -34,6 +37,7 @@ class ConcreteProductB(IProduct):
 
 class ConcreteProductC(IProduct):
     "A Concrete Class that implements the IProduct interface"
+    # desc : Concrete Product
 
     def __init__(self):
         self.name = "ConcreteProductC"
@@ -44,6 +48,7 @@ class ConcreteProductC(IProduct):
 
 class FactoryA:
     "The FactoryA Class"
+    # desc : Concrete Factory
 
     @staticmethod
     def create_object(some_property):
