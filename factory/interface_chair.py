@@ -6,7 +6,7 @@ from abc import ABCMeta, abstractmethod
 class IChair(metaclass=ABCMeta):
     "The Chair Interface (Product)"
 
-    @staticmethod
+    # @staticmethod
     @abstractmethod
-    def get_dimensions():
+    def get_dimensions(self):
         "A static interface method"

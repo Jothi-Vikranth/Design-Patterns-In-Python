@@ -6,6 +6,7 @@ from abc import ABCMeta, abstractmethod
 
 class IProduct(metaclass=ABCMeta):
     "A Hypothetical Class Interface (Product)"
+    # desc: Product Interface
 
     @staticmethod
     @abstractmethod
@@ -15,6 +16,7 @@ class IProduct(metaclass=ABCMeta):
 
 class ConcreteProductA(IProduct):
     "A Concrete Class that implements the IProduct interface"
+    # desc: Concrete Product
 
     def __init__(self):
         self.name = "ConcreteProductA"
@@ -25,6 +27,7 @@ class ConcreteProductA(IProduct):
 
 class ConcreteProductB(IProduct):
     "A Concrete Class that implements the IProduct interface"
+    # desc: Concrete Product
 
     def __init__(self):
         self.name = "ConcreteProductB"
@@ -35,6 +38,7 @@ class ConcreteProductB(IProduct):
 
 class ConcreteProductC(IProduct):
     "A Concrete Class that implements the IProduct interface"
+    # desc: Concrete Product
 
     def __init__(self):
         self.name = "ConcreteProductC"
@@ -45,6 +49,7 @@ class ConcreteProductC(IProduct):
 
 class Creator:
     "The Factory Class"
+    # desc: Creator
 
     @staticmethod
     def create_object(some_property):
@@ -59,5 +64,8 @@ class Creator:
 
 
 # The Client
-PRODUCT = Creator.create_object('b')
-print(PRODUCT.name)
+PRODUCT = Creator.create_object('b')    # desc: Concrete Creator
+if PRODUCT is not None :
+    print(PRODUCT.name)
+else :
+    print('Nothing to show')
